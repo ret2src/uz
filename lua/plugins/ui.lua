@@ -72,6 +72,7 @@ return {
 		},
 		opts = {
 			options = {
+				always_show_bufferline = false, -- do not show bufferline in situations where you only have a single buffer, etc.
 				offsets = {
 					{
 						filetype = "neo-tree",
