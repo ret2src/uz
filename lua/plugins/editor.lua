@@ -40,9 +40,9 @@ return {
 				desc = "Buffer Explorer",
 			},
 		},
-		cmd = "NeoTree",
+		cmd = "Neotree",
 		deactivate = function()
-			vim.cmd([[NeoTree close]])
+			vim.cmd([[Neotree close]])
 		end,
 	},
 }
