@@ -89,7 +89,13 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		main = "lualine",
+		config = function()
+			require("lualine").setup({
+				options = {
+					theme = "auto",
+				},
+			})
+		end,
 	},
 
 	-- indent guides
@@ -131,5 +137,16 @@ return {
 			options = { try_as_border = true },
 		},
 		main = "mini.indentscope",
+	},
+
+	-- displays a popup with possible key bindings of the command you started typing
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
 	},
 }
