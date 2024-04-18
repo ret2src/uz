@@ -1,6 +1,13 @@
 return {
 	-- The world-famous gruvbox colorscheme
-	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = true,
+		init = function()
+			require("config.colorscheme").init()
+		end,
+	},
 
 	-- Better `vim.notify()`
 	{
