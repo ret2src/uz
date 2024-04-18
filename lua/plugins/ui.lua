@@ -72,18 +72,6 @@ return {
 		},
 		opts = {
 			options = {
-				--     -- stylua: ignore
-				--     close_command = function(n) require("mini.bufremove").delete(n, false) end,
-				--     -- stylua: ignore
-				--     right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
-				-- diagnostics = "nvim_lsp",
-				-- always_show_bufferline = false,
-				-- diagnostics_indicator = function(_, _, diag)
-				-- 	local icons = require("lazyvim.config").icons.diagnostics
-				-- 	local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-				-- 		.. (diag.warning and icons.Warn .. diag.warning or "")
-				-- 	return vim.trim(ret)
-				-- end,
 				offsets = {
 					{
 						filetype = "neo-tree",
@@ -100,16 +88,5 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		event = "VeryLazy",
-		init = function()
-			vim.g.lualine_laststatus = vim.o.laststatus
-			if vim.fn.argc(-1) > 0 then
-				-- set an empty statusline till lualine loads
-				vim.o.statusline = " "
-			else
-				-- hide the statusline on the starter page
-				vim.o.laststatus = 0
-			end
-		end,
 	},
 }
