@@ -89,13 +89,7 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("lualine").setup({
-				options = {
-					theme = "auto",
-				},
-			})
-		end,
+		main = "lualine",
 	},
 
 	-- indent guides
@@ -136,9 +130,6 @@ return {
 			symbol = "│",
 			options = { try_as_border = true },
 		},
-		-- config = function()
-		-- 	require("mini.indentscope").setup()
-		-- end,
 		main = "mini.indentscope",
 	},
 }
