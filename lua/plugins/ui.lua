@@ -1,12 +1,10 @@
 return {
-	-- The world-famous gruvbox colorscheme
+	-- the world-famous gruvbox colorscheme
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		config = true,
 	},
 
-	-- Better `vim.notify()`
+	-- better `vim.notify()`
 	{
 		"rcarriga/nvim-notify",
 		event = "VeryLazy",
@@ -35,6 +33,24 @@ return {
 		init = function()
 			-- use nvim-notify as the default notification function
 			vim.notify = require("notify")
+		end,
+	},
+
+	-- better vim.ui
+	{
+		"stevearc/dressing.nvim",
+		lazy = true,
+		init = function()
+			---@diagnostic disable-next-line: duplicate-set-field
+			vim.ui.select = function(...)
+				require("lazy").load({ plugins = { "dressing.nvim" } })
+				return vim.ui.select(...)
+			end
+			---@diagnostic disable-next-line: duplicate-set-field
+			vim.ui.input = function(...)
+				require("lazy").load({ plugins = { "dressing.nvim" } })
+				return vim.ui.input(...)
+			end
 		end,
 	},
 }
