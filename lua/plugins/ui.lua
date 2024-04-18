@@ -4,9 +4,6 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = true,
-		init = function()
-			require("config.colorscheme").init()
-		end,
 	},
 
 	-- Better `vim.notify()`

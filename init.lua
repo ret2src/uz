@@ -1,2 +1,5 @@
--- bootstrap lazy.nvim, ultrazauberer.nvim and other plugins
+-- bootstrap lazy.nvim and other plugins
 require("config.lazy")
+
+-- load custom neovim options
+require("config.options")
