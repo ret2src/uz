@@ -9,13 +9,13 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		keys = {
-			{
-				-- "<leader>fe",
-				-- function()
-				-- 	require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
-				-- end,
-				-- desc = "Explorer NeoTree (Root Dir)",
-			},
+			-- {
+			-- "<leader>fe",
+			-- function()
+			-- 	require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
+			-- end,
+			-- desc = "Explorer NeoTree (Root Dir)",
+			-- },
 			{
 				"<leader>fE",
 				function()
