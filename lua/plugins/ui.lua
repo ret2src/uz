@@ -136,8 +136,9 @@ return {
 			symbol = "│",
 			options = { try_as_border = true },
 		},
-		config = function()
-			require("mini.indentscope").setup()
-		end,
+		-- config = function()
+		-- 	require("mini.indentscope").setup()
+		-- end,
+		main = "mini.indentscope",
 	},
 }
