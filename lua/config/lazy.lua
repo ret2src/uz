@@ -27,7 +27,11 @@ require("lazy").setup({
 		version = false, -- always use the latest git commit
 		-- version = "*", -- try installing the latest stable version for plugins that support semver
 	},
-	install = { colorscheme = { "tokyonight", "habamax" } },
+
+	install = {
+		-- try to load one of these colorschemes when starting an installation during startup
+		colorscheme = { "gruvbox" },
+	},
 	checker = { enabled = true }, -- automatically check for plugin updates
 	performance = {
 		rtp = {
@@ -45,3 +49,7 @@ require("lazy").setup({
 		},
 	},
 })
+
+-- Set the default colorscheme
+vim.opt.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
