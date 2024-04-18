@@ -101,7 +101,7 @@ return {
 	-- indent guides
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		event = "LazyFile",
+		event = "VeryLazy",
 		opts = {
 			indent = {
 				char = "│",
