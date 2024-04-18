@@ -1,9 +1,4 @@
 return {
-	-- The world-famous gruvbox colorscheme
-	{
-		"ellisonleao/gruvbox.nvim",
-	},
-
 	-- Better `vim.notify()`
 	{
 		"rcarriga/nvim-notify",
@@ -138,6 +133,7 @@ return {
 		},
 		init = function()
 			vim.api.nvim_create_autocmd("FileType", {
+				desc = "Disable indentscope for certain filetypes",
 				pattern = {
 					"help",
 					"alpha",
